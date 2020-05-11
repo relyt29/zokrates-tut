@@ -1,0 +1,7 @@
+import "hashes/sha256/512bitPacked" as sha256packed
+
+def main(private field a, private field b, private field c, private field d, public field h1, public field h2) -> (field):
+    shacalc = sha256packed([a, b, c, d])
+    shacalc[0] == h1
+    shacalc[1] == h2
+    return 1
